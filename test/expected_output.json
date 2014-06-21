@@ -1,0 +1,1012 @@
+{
+    "words": [
+        {
+            "start": 0.01247,
+            "end": 0.05238,
+            "word": "{p}",
+            "alignedWord": "sp"
+        },
+        {
+            "end": 0.18209,
+            "alignedWord": "DO",
+            "start": 0.05238,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "Do"
+        },
+        {
+            "end": 0.30181,
+            "alignedWord": "IT",
+            "start": 0.18209,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "it"
+        },
+        {
+            "end": 0.50136,
+            "alignedWord": "THEN",
+            "start": 0.30181,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "then."
+        },
+        {
+            "end": 0.74082,
+            "alignedWord": "EDDIE",
+            "start": 0.50136,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "Eddie"
+        },
+        {
+            "end": 1.05011,
+            "alignedWord": "TURNER",
+            "start": 0.74082,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "Turner"
+        },
+        {
+            "end": 1.26961,
+            "alignedWord": "LET'S",
+            "start": 1.05011,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "let's"
+        },
+        {
+            "end": 1.44921,
+            "alignedWord": "START",
+            "start": 1.26961,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "start"
+        },
+        {
+            "end": 1.6288,
+            "alignedWord": "WITH",
+            "start": 1.44921,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "with"
+        },
+        {
+            "end": 1.9381,
+            "alignedWord": "YOU",
+            "start": 1.6288,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "you."
+        },
+        {
+            "end": 2.04785,
+            "alignedWord": "LOOK",
+            "start": 1.9381,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "Look"
+        },
+        {
+            "end": 2.25737,
+            "alignedWord": "STRAIGHT",
+            "start": 2.04785,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "straight"
+        },
+        {
+            "end": 2.3771,
+            "alignedWord": "INTO",
+            "start": 2.25737,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "into"
+        },
+        {
+            "end": 2.57664,
+            "alignedWord": "THAT",
+            "start": 2.3771,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "that"
+        },
+        {
+            "end": 2.86599,
+            "alignedWord": "CAMERA",
+            "start": 2.57664,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "camera"
+        },
+        {
+            "end": 2.95578,
+            "alignedWord": "YOU'VE",
+            "start": 2.86599,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "you've"
+        },
+        {
+            "end": 3.1254,
+            "alignedWord": "GOT",
+            "start": 2.95578,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "got"
+        },
+        {
+            "start": 3.1254,
+            "end": 3.20522,
+            "word": "{p}",
+            "alignedWord": "sp"
+        },
+        {
+            "end": 3.46463,
+            "alignedWord": "30",
+            "start": 3.20522,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "30"
+        },
+        {
+            "end": 3.99342,
+            "alignedWord": "SECONDS",
+            "start": 3.46463,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "seconds"
+        },
+        {
+            "end": 4.14308,
+            "alignedWord": "GIVE",
+            "start": 3.99342,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "give"
+        },
+        {
+            "end": 4.27279,
+            "alignedWord": "US",
+            "start": 4.14308,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "us"
+        },
+        {
+            "end": 4.36259,
+            "alignedWord": "YOUR",
+            "start": 4.27279,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "your"
+        },
+        {
+            "end": 4.82154,
+            "alignedWord": "PITCH",
+            "start": 4.36259,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "pitch."
+        },
+        {
+            "start": 4.82154,
+            "end": 6.378,
+            "word": "{p}",
+            "alignedWord": "sp"
+        },
+        {
+            "end": 6.66735,
+            "alignedWord": "WELL",
+            "start": 6.378,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "Well"
+        },
+        {
+            "end": 6.89683,
+            "alignedWord": "I",
+            "start": 6.66735,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "I"
+        },
+        {
+            "end": 7.15624,
+            "alignedWord": "AM",
+            "start": 6.89683,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "am"
+        },
+        {
+            "start": 7.15624,
+            "end": 7.18617,
+            "word": "{p}",
+            "alignedWord": "sp"
+        },
+        {
+            "end": 8.01429,
+            "alignedWord": "EXTREMELY",
+            "start": 7.18617,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "extremely"
+        },
+        {
+            "end": 8.78254,
+            "alignedWord": "PASSIONATE",
+            "start": 8.01429,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "passionate"
+        },
+        {
+            "start": 8.78254,
+            "end": 9.04195,
+            "word": "{p}",
+            "alignedWord": "sp"
+        },
+        {
+            "end": 9.39116,
+            "alignedWord": "ABOUT",
+            "start": 9.04195,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "about"
+        },
+        {
+            "end": 10.32902,
+            "alignedWord": "TECHNOLOGY",
+            "start": 9.39116,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "technology"
+        },
+        {
+            "start": 10.32902,
+            "end": 10.50862,
+            "word": "{p}",
+            "alignedWord": "sp"
+        },
+        {
+            "end": 10.84785,
+            "alignedWord": "AND",
+            "start": 10.50862,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "and"
+        },
+        {
+            "end": 11.34671,
+            "alignedWord": "LEARNING",
+            "start": 10.84785,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "learning"
+        },
+        {
+            "start": 11.34671,
+            "end": 11.67596,
+            "word": "{p}",
+            "alignedWord": "sp"
+        },
+        {
+            "end": 11.81565,
+            "alignedWord": "AND",
+            "start": 11.67596,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "and"
+        },
+        {
+            "end": 11.94535,
+            "alignedWord": "I",
+            "start": 11.81565,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "I"
+        },
+        {
+            "end": 12.10499,
+            "alignedWord": "AM",
+            "start": 11.94535,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "am"
+        },
+        {
+            "end": 12.4542,
+            "alignedWord": "VERY",
+            "start": 12.10499,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "very"
+        },
+        {
+            "end": 13.01293,
+            "alignedWord": "INTERESTING",
+            "start": 12.4542,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "interesting"
+        },
+        {
+            "end": 13.12268,
+            "alignedWord": "IN",
+            "start": 13.01293,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "in"
+        },
+        {
+            "end": 13.61156,
+            "alignedWord": "USING",
+            "start": 13.12268,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "using"
+        },
+        {
+            "start": 13.61156,
+            "end": 13.78118,
+            "word": "{p}",
+            "alignedWord": "sp"
+        },
+        {
+            "end": 14.2102,
+            "alignedWord": "MY",
+            "start": 13.78118,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "my"
+        },
+        {
+            "start": 14.2102,
+            "end": 14.3898,
+            "word": "{p}",
+            "alignedWord": "sp"
+        },
+        {
+            "end": 14.79887,
+            "alignedWord": "YEARS",
+            "start": 14.3898,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "years"
+        },
+        {
+            "end": 14.88866,
+            "alignedWord": "OF",
+            "start": 14.79887,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "of"
+        },
+        {
+            "end": 15.45737,
+            "alignedWord": "EXPERIENCE",
+            "start": 14.88866,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "experience"
+        },
+        {
+            "end": 15.56712,
+            "alignedWord": "IN",
+            "start": 15.45737,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "in"
+        },
+        {
+            "end": 16.12585,
+            "alignedWord": "TECHNOLOGY",
+            "start": 15.56712,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "technology"
+        },
+        {
+            "end": 16.69456,
+            "alignedWord": "SUPPORT",
+            "start": 16.12585,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "support"
+        },
+        {
+            "start": 16.69456,
+            "end": 17.08367,
+            "word": "{p}",
+            "alignedWord": "sp"
+        },
+        {
+            "end": 17.5127,
+            "alignedWord": "AND",
+            "start": 17.08367,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "and"
+        },
+        {
+            "end": 18.16122,
+            "alignedWord": "TECHING",
+            "start": 17.5127,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "teching"
+        },
+        {
+            "start": 18.16122,
+            "end": 18.57029,
+            "word": "{p}",
+            "alignedWord": "sp"
+        },
+        {
+            "end": 18.98934,
+            "alignedWord": "COMBINED",
+            "start": 18.57029,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "combined"
+        },
+        {
+            "end": 19.08912,
+            "alignedWord": "WITH",
+            "start": 18.98934,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "with"
+        },
+        {
+            "end": 19.25873,
+            "alignedWord": "MY",
+            "start": 19.08912,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "my"
+        },
+        {
+            "end": 19.46825,
+            "alignedWord": "NORTH",
+            "start": 19.25873,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "North"
+        },
+        {
+            "end": 19.78753,
+            "alignedWord": "WESTERN",
+            "start": 19.46825,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "Western"
+        },
+        {
+            "end": 20.49592,
+            "alignedWord": "EDUCATION",
+            "start": 19.78753,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "education"
+        },
+        {
+            "start": 20.49592,
+            "end": 20.77528,
+            "word": "{p}",
+            "alignedWord": "sp"
+        },
+        {
+            "end": 20.9449,
+            "alignedWord": "TO",
+            "start": 20.77528,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "to"
+        },
+        {
+            "end": 21.24422,
+            "alignedWord": "HELP",
+            "start": 20.9449,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "help"
+        },
+        {
+            "start": 21.24422,
+            "end": 21.33401,
+            "word": "{p}",
+            "alignedWord": "sp"
+        },
+        {
+            "end": 21.86281,
+            "alignedWord": "MANAGE",
+            "start": 21.33401,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "manage"
+        },
+        {
+            "end": 21.97256,
+            "alignedWord": "AN",
+            "start": 21.86281,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "an"
+        },
+        {
+            "end": 22.60113,
+            "alignedWord": "ORGANIZATION'S",
+            "start": 21.97256,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "organization's"
+        },
+        {
+            "end": 23.11995,
+            "alignedWord": "TECHNOLOGY",
+            "start": 22.60113,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "technology"
+        },
+        {
+            "end": 23.65873,
+            "alignedWord": "PROJECT",
+            "start": 23.11995,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "project"
+        },
+        {
+            "end": 23.85828,
+            "alignedWord": "TEAM",
+            "start": 23.65873,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "team."
+        },
+        {
+            "start": 23.85828,
+            "end": 24.58662,
+            "word": "{p}",
+            "alignedWord": "sp"
+        },
+        {
+            "end": 25.07551,
+            "alignedWord": "OR",
+            "start": 24.58662,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "Or"
+        },
+        {
+            "start": 25.07551,
+            "end": 25.32494,
+            "word": "{p}",
+            "alignedWord": "sp"
+        },
+        {
+            "end": 25.54444,
+            "alignedWord": "AN",
+            "start": 25.32494,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "an"
+        },
+        {
+            "end": 26.38254,
+            "alignedWord": "ORGANIZATION",
+            "start": 25.54444,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "organization"
+        },
+        {
+            "end": 26.57211,
+            "alignedWord": "THAT",
+            "start": 26.38254,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "that"
+        },
+        {
+            "end": 26.7517,
+            "alignedWord": "HAS",
+            "start": 26.57211,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "has"
+        },
+        {
+            "end": 26.86145,
+            "alignedWord": "A",
+            "start": 26.7517,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "a"
+        },
+        {
+            "end": 27.39025,
+            "alignedWord": "LEARNING",
+            "start": 26.86145,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "learning"
+        },
+        {
+            "end": 27.5,
+            "alignedWord": "AND",
+            "start": 27.39025,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "and"
+        },
+        {
+            "end": 27.87914,
+            "alignedWord": "TALENT",
+            "start": 27.5,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "talent"
+        },
+        {
+            "end": 28.44785,
+            "alignedWord": "DEVELOPMENT",
+            "start": 27.87914,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "development"
+        },
+        {
+            "end": 29.06644,
+            "alignedWord": "DEPARTMENT",
+            "start": 28.44785,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "department."
+        },
+        {
+            "start": 29.06644,
+            "end": 29.37574,
+            "word": "{p}",
+            "alignedWord": "sp"
+        },
+        {
+            "end": 29.59524,
+            "alignedWord": "I'D",
+            "start": 29.37574,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "I'd"
+        },
+        {
+            "end": 29.8746,
+            "alignedWord": "LOVE",
+            "start": 29.59524,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "love"
+        },
+        {
+            "end": 29.98435,
+            "alignedWord": "TO",
+            "start": 29.8746,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "to"
+        },
+        {
+            "end": 30.26372,
+            "alignedWord": "HELP",
+            "start": 29.98435,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "help"
+        },
+        {
+            "end": 30.47324,
+            "alignedWord": "THEM",
+            "start": 30.26372,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "them"
+        },
+        {
+            "end": 31.09184,
+            "alignedWord": "POWER",
+            "start": 30.47324,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "power"
+        },
+        {
+            "end": 31.30136,
+            "alignedWord": "UP",
+            "start": 31.09184,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "up"
+        },
+        {
+            "start": 31.30136,
+            "end": 31.64059,
+            "word": "{p}",
+            "alignedWord": "sp"
+        },
+        {
+            "end": 32.02971,
+            "alignedWord": "THEIR",
+            "start": 31.64059,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "their"
+        },
+        {
+            "end": 32.63832,
+            "alignedWord": "EMPLOYEE",
+            "start": 32.02971,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "employee"
+        },
+        {
+            "end": 33.31678,
+            "alignedWord": "ENGAUGEMENT",
+            "start": 32.63832,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "engaugement"
+        },
+        {
+            "start": 33.31678,
+            "end": 33.64603,
+            "word": "{p}",
+            "alignedWord": "sp"
+        },
+        {
+            "end": 33.78571,
+            "alignedWord": "THROUGH",
+            "start": 33.64603,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "through"
+        },
+        {
+            "end": 33.89546,
+            "alignedWord": "THE",
+            "start": 33.78571,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "the"
+        },
+        {
+            "end": 34.23469,
+            "alignedWord": "USE",
+            "start": 33.89546,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "use"
+        },
+        {
+            "end": 34.31451,
+            "alignedWord": "OF",
+            "start": 34.23469,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "of"
+        },
+        {
+            "end": 35.17256,
+            "alignedWord": "TECHNOLOGIES",
+            "start": 34.31451,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "technologies"
+        },
+        {
+            "start": 35.17256,
+            "end": 35.30227,
+            "word": "{p}",
+            "alignedWord": "sp"
+        },
+        {
+            "end": 35.5517,
+            "alignedWord": "SUCH",
+            "start": 35.30227,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "such"
+        },
+        {
+            "end": 35.66145,
+            "alignedWord": "AS",
+            "start": 35.5517,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "as"
+        },
+        {
+            "end": 36.18027,
+            "alignedWord": "SOCIAL",
+            "start": 35.66145,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "social"
+        },
+        {
+            "end": 36.67914,
+            "alignedWord": "MEDIA",
+            "start": 36.18027,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "media"
+        },
+        {
+            "start": 36.67914,
+            "end": 36.92857,
+            "word": "{p}",
+            "alignedWord": "sp"
+        },
+        {
+            "end": 37.1381,
+            "alignedWord": "AND",
+            "start": 36.92857,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "and"
+        },
+        {
+            "end": 37.31769,
+            "alignedWord": "THE",
+            "start": 37.1381,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "the"
+        },
+        {
+            "start": 37.31769,
+            "end": 37.33764,
+            "word": "{p}",
+            "alignedWord": "sp"
+        },
+        {
+            "end": 37.77664,
+            "alignedWord": "APPLE",
+            "start": 37.33764,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "Apple"
+        },
+        {
+            "end": 38.16576,
+            "alignedWord": "IPHONE",
+            "start": 37.77664,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "iPhone."
+        },
+        {
+            "start": 38.16576,
+            "end": 39.41293,
+            "word": "{p}",
+            "alignedWord": "sp"
+        },
+        {
+            "end": 39.53265,
+            "alignedWord": "LOOK",
+            "start": 39.41293,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "Look"
+        },
+        {
+            "end": 39.63243,
+            "alignedWord": "AT",
+            "start": 39.53265,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "at"
+        },
+        {
+            "end": 40.02154,
+            "alignedWord": "THAT",
+            "start": 39.63243,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "that."
+        },
+        {
+            "start": 40.02154,
+            "end": 40.09138,
+            "word": "{p}",
+            "alignedWord": "sp"
+        },
+        {
+            "end": 40.261,
+            "alignedWord": "RIGHT",
+            "start": 40.09138,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "Right"
+        },
+        {
+            "end": 40.38073,
+            "alignedWord": "ON",
+            "start": 40.261,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "on"
+        },
+        {
+            "end": 40.44059,
+            "alignedWord": "THE",
+            "start": 40.38073,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "the"
+        },
+        {
+            "end": 40.94943,
+            "alignedWord": "MONEY",
+            "start": 40.44059,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "money."
+        },
+        {
+            "end": 41.08912,
+            "alignedWord": "AND",
+            "start": 40.94943,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "And"
+        },
+        {
+            "end": 41.17891,
+            "alignedWord": "YOU'RE",
+            "start": 41.08912,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "you're"
+        },
+        {
+            "end": 41.39841,
+            "alignedWord": "VERY",
+            "start": 41.17891,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "very"
+        },
+        {
+            "end": 41.56803,
+            "alignedWord": "GOOD",
+            "start": 41.39841,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "good"
+        },
+        {
+            "end": 41.74762,
+            "alignedWord": "WITH",
+            "start": 41.56803,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "with"
+        },
+        {
+            "end": 42.1966,
+            "alignedWord": "TIME",
+            "start": 41.74762,
+            "line_idx": 0,
+            "speaker": "0",
+            "word": "time."
+        },
+        {
+            "start": 42.1966,
+            "end": 42.3263,
+            "word": "{p}",
+            "alignedWord": "sp"
+        }
+    ]
+}

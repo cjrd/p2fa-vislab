@@ -7,7 +7,7 @@ I've made a bunch of changes to the output and input formats, and also to findin
 
 See the original ``readme.txt`` in the repo for more details.
 
-This script was used in my research project: [Content-Based Tools for Editing Audio Stories](http://vis.berkeley.edu/papers/audiostories) [UIST 2013]. 
+This script was used in my research project: [Content-Based Tools for Editing Audio Stories](http://vis.berkeley.edu/papers/audiostories) [UIST 2013].
 
 Setup
 -----
@@ -51,7 +51,7 @@ Usage
 
 The input ``audio_file.wav`` must be 16 bit and mono.
 
-The input transcript json must have the following [jsonschema](http://json-schema.org): 
+The input transcript json must have the following [jsonschema](http://json-schema.org):
 
 ```json
 {
@@ -150,3 +150,9 @@ TextGrid output
 You can also specifiy `--textgrid`  and `--no-json` on the command
 line to get the output of the script as a Praat TextGrid file instead
 of in the json format.
+
+### Test
+
+The following command should execute without error:
+
+         python align.py test/testin.wav test/testin.json test/output.json
