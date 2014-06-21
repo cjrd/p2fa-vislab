@@ -144,6 +144,12 @@ The output will be a json with the following jsonschema:
 }
 ```
 
+### Test
+
+The following command should execute without error:
+
+         python align.py test/testin.wav test/testin.json test/output.json
+
 TextGrid output
 ---------------
 
@@ -151,8 +157,3 @@ You can also specifiy `--textgrid`  and `--no-json` on the command
 line to get the output of the script as a Praat TextGrid file instead
 of in the json format.
 
-### Test
-
-The following command should execute without error:
-
-         python align.py test/testin.wav test/testin.json test/output.json
