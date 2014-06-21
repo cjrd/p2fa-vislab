@@ -6,7 +6,7 @@
         -r sampling_rate -- override which sample rate model to use, one of 8000, 11025, and 16000
         -s start_time    -- start of portion of wavfile to align (in seconds, default 0)
         -e end_time      -- end of portion of wavfile to align (in seconds, defaul to end)
-            
+
     You can also import this file as a module and use the functions directly.
 """
 
@@ -21,7 +21,7 @@ try:
     import simplejson as json
 except:
     import json
-    
+
 # for converting numbers to words
 import inflect
 import jsonschema
@@ -54,7 +54,7 @@ def prep_wav(orig_wav, out_wav, sr_override, sr_models, wave_start, wave_end):
     f = wave.open(orig_wav, 'r')
     SR = f.getframerate()
     f.close()
-    
+
     soxopts = ""
     if float(wave_start) != 0.0 or wave_end != None :
         soxopts += " trim " + wave_start
@@ -65,7 +65,7 @@ def prep_wav(orig_wav, out_wav, sr_override, sr_models, wave_start, wave_end):
         new_sr = 11025
         if sr_override != None :
             new_sr = sr_override
-        
+
         print "Resampling wav file from " + str(SR) + " to " + str(new_sr) + soxopts + "..."
         SR = new_sr
         print "sox " + orig_wav + " -r " + str(SR) + " " + out_wav + "" + soxopts
@@ -79,11 +79,11 @@ def prep_wav(orig_wav, out_wav, sr_override, sr_models, wave_start, wave_end):
 
 def prep_mlf(trsfile, mlffile, word_dictionary, surround, between,
     dialog_file=False):
-    
+
     dict_tmp = {}
-    
+
     infl = inflect.engine()
-    
+
     # Read in the dictionary to ensure all of the words
     # we put in the MLF file are in the dictionary. Words
     # that are not are skipped with a warning.
@@ -93,7 +93,7 @@ def prep_mlf(trsfile, mlffile, word_dictionary, surround, between,
         if line != "\n" and line != "" :
             dictionary[line.split()[0]] = True
     f.close()
-    
+
     speakers = None
     emotions = None
 
@@ -125,27 +125,27 @@ def prep_mlf(trsfile, mlffile, word_dictionary, surround, between,
 
     # this pattern matches hyphenated words, such as TWENTY-TWO; however, it doesn't work with longer things like SOMETHING-OR-OTHER
     hyphenPat = re.compile(r'([a-zA-Z]+)-([a-zA-Z]+)')
-    
+
     while (i < len(lines)):
         txt = lines[i].replace('\n', '')
         txt = txt.replace('{br}', '{BR}').replace('&lt;noise&gt;', '{NS}')
         txt = txt.replace('{laugh}', '{LG}').replace('{laughter}', '{LG}')
         txt = txt.replace('{cough}', '{CG}').replace('{lipsmack}', '{LS}')
-        
+
         for pun in [',', '.', ':', ';', '!', '?', '"', '%', '(', ')', '--', '---']:
             # remove hanging punctuation before we get started
             txt = txt.replace(' ' + pun + ' ', ' ')
-        
+
         hyph_punct = re.compile(r"(-[-]+)")
         txt = hyph_punct.sub(r"\1 ", txt)
 
         txt = re.sub(r"([A-Za-z])\.\.\.([A-Za-z])", r"\1... \2", txt)
 
         txt_with_pun = txt.split()
-        
+
         for pun in ['...']:
             txt = txt.replace(pun, '')
-        
+
         for pun in [',', '.', ':', ';', '!', '?', '"', '%', '(', ')', '--', '---']:
             txt = txt.replace(pun,  '')
 
@@ -153,7 +153,7 @@ def prep_mlf(trsfile, mlffile, word_dictionary, surround, between,
         txt = re.sub(r"\s'", " ", txt)
 
         txt = txt.split()
-        
+
         if (len(txt) != len(txt_with_pun)):
             # Try not to use hyphenated words either, if at all possible!
             import pdb; pdb.set_trace()
@@ -163,9 +163,9 @@ def prep_mlf(trsfile, mlffile, word_dictionary, surround, between,
             # break up any hyphenated words into two separate words
             new_wrd = re.sub(hyphenPat, r'\1 \2', wrd)
             new_wrd = new_wrd.split()
-            
+
             gwm_entry = [txt_with_pun[w_idx]]
-            
+
             new_up_wrd = [x.upper() for x in new_wrd]
             # print new_wrd
             # print new_up_wrd
@@ -206,7 +206,7 @@ def prep_mlf(trsfile, mlffile, word_dictionary, surround, between,
                     #     numwrds = numwrds.replace('-', ' ')
                     #     numwrds = numwrds.replace(',', '')
                     #     numwrds = numwrds.split()
-                    #     
+                    #
                     #     for w in numwrds:
                     #         if w in dictionary:
                     #             words.append(w)
@@ -233,10 +233,10 @@ def prep_mlf(trsfile, mlffile, word_dictionary, surround, between,
 
     if surround != None:
         words += surround.split(',')
-    
+
     writeInputMLF(mlffile, words)
     writeDictTmp(dict_tmp)
-    
+
 def writeInputMLF(mlffile, words) :
     fw = open(mlffile, 'w')
     fw.write('#!MLF!#\n')
@@ -267,14 +267,14 @@ def readAlignedMLF(mlffile, SR, wave_start):
     # alignments and returns a list of words, each word is a list containing
     # the word label followed by the phones, each phone is a tuple
     # (phone, start_time, end_time) with times in seconds.
-    
+
     f = open(mlffile, 'r')
     lines = [l.rstrip() for l in f.readlines()]
     f.close()
-    
+
     if len(lines) < 3 :
         raise ValueError("Alignment did not complete succesfully.")
-            
+
     j = 2
     ret = []
     while (lines[j] <> '.'):
@@ -282,7 +282,7 @@ def readAlignedMLF(mlffile, SR, wave_start):
             # Make a new word list in ret and put the word label at the beginning
             wrd = lines[j].split()[4]
             ret.append([wrd])
-        
+
         # Append this phone to the latest word (sub-)list
         ph = lines[j].split()[2]
         if (SR == 11025):
@@ -290,12 +290,12 @@ def readAlignedMLF(mlffile, SR, wave_start):
             en = (float(lines[j].split()[1])/10000000.0 + 0.0125)*(11000.0/11025.0)
         else:
             st = float(lines[j].split()[0])/10000000.0 + 0.0125
-            en = float(lines[j].split()[1])/10000000.0 + 0.0125   
+            en = float(lines[j].split()[1])/10000000.0 + 0.0125
         if st < en:
             ret[-1].append([ph, st+wave_start, en+wave_start])
-        
+
         j += 1
-        
+
     return ret
 
 # steve added 1/23/2013
@@ -323,26 +323,26 @@ def writeJSON(outfile, word_alignments):
 
     real_word_count = 0
     total_word_idx = 0
-    
-    
+
+
     while total_word_idx < len(wrds) - 1:
         # if wrds[k][0] == "sp":
         #     continue
-        
+
         print wrds[total_word_idx], global_word_map[real_word_count]
-        
+
         if wrds[total_word_idx][0] != "sp"\
             and wrds[total_word_idx][0] != "{BR}":
             word_length = len(global_word_map[real_word_count]) - 1
         else:
             word_length = 1
-                
+
         tmp_word = {
             "alignedWord": wrds[total_word_idx][0],
             "start": round(wrds[total_word_idx][1], 5),
             "end": round(wrds[total_word_idx + word_length][1], 5)
         }
-        
+
         if wrds[total_word_idx][0] != "sp"\
             and wrds[total_word_idx][0] != "{BR}":
             tmp_word["word"] = global_word_map[real_word_count][0]
@@ -352,7 +352,7 @@ def writeJSON(outfile, word_alignments):
                 tmp_word["speaker"] = global_speaker_map[real_word_count]
             if len(global_emo_map) > 0:
                 tmp_word["emotion"] = global_emo_map[real_word_count]
-            
+
             real_word_count += 1
         elif wrds[total_word_idx][0] == "sp":
             tmp_word["word"] = "{p}"
@@ -379,7 +379,7 @@ def writeJSON(outfile, word_alignments):
             tmp_word["alignedWord"] = " ".join([w[0]
                 for w in wrds[total_word_idx - skipped_pauses -
                               word_length : total_word_idx]])
-                
+
 
         # real_words_to_skip = word_length
         # total_word_idx += 1
@@ -396,7 +396,7 @@ def writeJSON(outfile, word_alignments):
         "start": round(wrds[-1][1], 5),
         "end": round(phons[-1][2], 5)
     }
-    
+
     if wrds[-1][0] != "sp" and wrds[-1][0] != "{BR}":
         tmp_word["word"] = global_word_map[real_word_count][0]
         tmp_word["line_idx"] = global_lineidx_map[real_word_count]
@@ -404,14 +404,14 @@ def writeJSON(outfile, word_alignments):
         if len(global_speaker_map) > 0:
             tmp_word["speaker"] = global_speaker_map[real_word_count]
         if len(global_emo_map) > 0:
-            tmp_word["emotion"] = global_emo_map[real_word_count] 
+            tmp_word["emotion"] = global_emo_map[real_word_count]
     elif wrds[-1][0] == "sp":
         tmp_word["word"] = "{p}"
     elif wrds[-1][0] == "{BR}":
         tmp_word["word"] = "{br}"
-    
+
     out_dict["words"].append(tmp_word)
-    
+
     try:
         jsonschema.validate(out_dict, ALIGNMENT_SCHEMA)
     except jsonschema.ValidationError, e:
@@ -421,7 +421,7 @@ def writeJSON(outfile, word_alignments):
 
     with open(outfile, "w") as f_out:
         json.dump(out_dict, f_out, indent=4)
-    
+
 
 def writeTextGrid(outfile, word_alignments):
     tg = tgt.TextGrid()
@@ -451,7 +451,7 @@ def writeTextGrid(outfile, word_alignments):
     # phons = []
     # for wrd in word_alignments :
     #     phons.extend(wrd[1:]) # skip the word label
-        
+
     # # make the list of just word alignments
     # # we're getting elements of the form:
     # #   ["word label", ["phone1", start, end], ["phone2", start, end], ...]
@@ -462,9 +462,9 @@ def writeTextGrid(outfile, word_alignments):
     #     if len(wrd) == 1 :
     #         continue
     #     wrds.append([wrd[0], wrd[1][1], wrd[-1][2]]) # word label, first phone start time, last phone end time
-    
+
     # #write the phone interval tier
-    
+
     # # steve edits 1/23/2013
     # fw = open(outfile, 'w')
     # # fw.write('File type = "ooTextFile short"\n')
@@ -485,7 +485,7 @@ def writeTextGrid(outfile, word_alignments):
     #     fw.write(str(phons[k][1]) + '\n')
     #     fw.write(str(phons[k][2]) + '\n')
     #     fw.write('"' + phons[k][0] + '"' + '\n')
-    
+
     # #write the word interval tier
     # fw.write('"IntervalTier"\n')
     # fw.write('"word"\n')
@@ -496,11 +496,11 @@ def writeTextGrid(outfile, word_alignments):
     #     fw.write(str(wrds[k][1]) + '\n')
     #     fw.write(str(wrds[k+1][1]) + '\n')
     #     fw.write('"' + wrds[k][0] + '"' + '\n')
-    
+
     # fw.write(str(wrds[-1][1]) + '\n')
     # fw.write(str(phons[-1][2]) + '\n')
-    # fw.write('"' + wrds[-1][0] + '"' + '\n')               
-    
+    # fw.write('"' + wrds[-1][0] + '"' + '\n')
+
     # fw.close()
 
 def prep_working_directory() :
@@ -514,15 +514,15 @@ def prep_scp(wavfile) :
     fw = open('./tmp/test.scp', 'w')
     fw.write('./tmp/tmp.plp\n')
     fw.close()
-    
+
 def create_plp(hcopy_config) :
     os.system('HCopy -T 1 -C ' + hcopy_config + ' -S ./tmp/codetr.scp')
-    
+
 def viterbi(input_mlf, word_dictionary, output_mlf, phoneset, hmmdir) :
     command = 'HVite -T 1 -a -m -I ' + input_mlf + ' -H ' + hmmdir + '/macros -H ' + hmmdir + '/hmmdefs  -S ./tmp/test.scp -i ' + output_mlf + ' -p 0.0 -s 5.0 ' + word_dictionary + ' ' + phoneset + ' > ./tmp/aligned.results'
     # command = 'HVite -T 1 -a -m -I ' + input_mlf + ' -H ' + hmmdir + '/macros -H ' + hmmdir + '/hmmdefs  -S ./tmp/test.scp -i ' + output_mlf + ' -p 0.0 -s 5.0 ' + word_dictionary + ' ' + phoneset
     os.system(command)
-    
+
 def getopt2(name, opts, default = None) :
     value = [v for n,v in opts if n==name]
     if len(value) == 0 :
@@ -560,47 +560,47 @@ def do_alignment(wavfile, trsfile, outfile, json, textgrid):
         # sample rates for which there are acoustic models set up, otherwise
         # the signal must be resampled to one of these rates.
         sr_models = [8000, 11025, 16000]
-    
+
     if sr_override != None and sr_models != None and not sr_override in sr_models :
         raise ValueError, "invalid sample rate: not an acoustic model available"
-        
+
     word_dictionary = "./tmp/dict"
     input_mlf = './tmp/tmp.mlf'
     output_mlf = './tmp/aligned.mlf'
-    
+
     # create working directory
     prep_working_directory()
-    
+
     # create ./tmp/dict by concatening our dict with a local one
     if os.path.exists("dict.local"):
         os.system("cat " + mypath + "/dict dict.local > " + word_dictionary)
     else:
         os.system("cat " + mypath + "/dict > " + word_dictionary)
-    
+
     #prepare wavefile: do a resampling if necessary
     tmpwav = "./tmp/sound.wav"
     SR = prep_wav(wavfile, tmpwav, sr_override, sr_models, wave_start, wave_end)
-    
+
     if hmmsubdir == "FROM-SR" :
         hmmsubdir = "/" + str(SR)
-    
+
     #prepare mlfile
     prep_mlf(trsfile, input_mlf, word_dictionary, surround_token,
         between_token, dialog_file=True)
- 
+
     # (do this again because we update dict.local in prep_mlf)
     if os.path.exists("dict.tmp"):
         os.system("cat " + mypath + "/dict dict.tmp > " + word_dictionary)
         os.system("sort " + word_dictionary + " -o " + word_dictionary)
     else:
         os.system("cat " + mypath + "/dict > " + word_dictionary)
- 
+
     #prepare scp files
     prep_scp(tmpwav)
-    
+
     # generate the plp file using a given configuration file for HCopy
     create_plp(mypath + hmmsubdir + '/config')
-    
+
     # run Verterbi decoding
     #print "Running HVite..."
     mpfile = mypath + '/monophones'
@@ -621,29 +621,29 @@ if __name__ == '__main__':
     do_alignment()
     # try:
     #     opts, args = getopt.getopt(sys.argv[1:], "r:s:e:", ["model="])
-        
+
     #     # get the three mandatory arguments
     #     if len(args) != 3 :
     #         raise ValueError("Specify wavefile, a transcript file, and an output file!")
-            
+
     #     wavfile, trsfile, outfile = args
-        
+
     #     sr_override = getopt2("-r", opts, None)
     #     wave_start = getopt2("-s", opts, "0.0")
     #     wave_end = getopt2("-e", opts, None)
     #     surround_token = "sp" #getopt2("-p", opts, 'sp')
     #     between_token = ["sp"] #getopt2("-b", opts, 'sp')
-        
+
     #     if surround_token.strip() == "":
     #         surround_token = None
-        
+
     #     mypath = getopt2("--model", opts, None)
     # except :
     #     print __doc__
     #     (type, value, traceback) = sys.exc_info()
     #     print value
     #     sys.exit(0)
-    
+
     # # If no model directory was said explicitly, get directory containing this script.
     # hmmsubdir = ""
     # sr_models = None
@@ -653,47 +653,47 @@ if __name__ == '__main__':
     #     # sample rates for which there are acoustic models set up, otherwise
     #     # the signal must be resampled to one of these rates.
     #     sr_models = [8000, 11025, 16000]
-    
+
     # if sr_override != None and sr_models != None and not sr_override in sr_models :
     #     raise ValueError, "invalid sample rate: not an acoustic model available"
-        
+
     # word_dictionary = "./tmp/dict"
     # input_mlf = './tmp/tmp.mlf'
     # output_mlf = './tmp/aligned.mlf'
-    
+
     # # create working directory
     # prep_working_directory()
-    
+
     # # create ./tmp/dict by concatening our dict with a local one
     # if os.path.exists("dict.local"):
     #     os.system("cat " + mypath + "/dict dict.local > " + word_dictionary)
     # else:
     #     os.system("cat " + mypath + "/dict > " + word_dictionary)
-    
+
     # #prepare wavefile: do a resampling if necessary
     # tmpwav = "./tmp/sound.wav"
     # SR = prep_wav(wavfile, tmpwav, sr_override, wave_start, wave_end)
-    
+
     # if hmmsubdir == "FROM-SR" :
     #     hmmsubdir = "/" + str(SR)
-    
+
     # #prepare mlfile
     # prep_mlf(trsfile, input_mlf, word_dictionary, surround_token,
     #     between_token, dialog_file=True)
- 
+
     # # (do this again because we update dict.local in prep_mlf)
     # if os.path.exists("dict.tmp"):
     #     os.system("cat " + mypath + "/dict dict.tmp > " + word_dictionary)
     #     os.system("sort " + word_dictionary + " -o " + word_dictionary)
     # else:
     #     os.system("cat " + mypath + "/dict > " + word_dictionary)
- 
+
     # #prepare scp files
     # prep_scp(tmpwav)
-    
+
     # # generate the plp file using a given configuration file for HCopy
     # create_plp(mypath + hmmsubdir + '/config')
-    
+
     # # run Verterbi decoding
     # #print "Running HVite..."
     # mpfile = mypath + '/monophones'
@@ -706,4 +706,3 @@ if __name__ == '__main__':
 
     # # output the alignment as a Praat TextGrid
     # writeTextGrid(outfile, readAlignedMLF(output_mlf, SR, float(wave_start)))
-
