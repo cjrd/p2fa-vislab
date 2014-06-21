@@ -144,11 +144,12 @@ The output will be a json with the following jsonschema:
 }
 ```
 
-### Test
+Test
+-----
 
 The following command should execute without error:
 
-         python align.py test/testin.wav test/testin.json test/output.json
+    python align.py test/testin.wav test/testin.json test/output.json
 
 TextGrid output
 ---------------
