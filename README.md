@@ -51,6 +51,10 @@ Usage
 
 The input ``audio_file.wav`` must be 16 bit and mono.
 
+e.g. extract and convert mp4 video audio to the correct format
+
+    ffmpeg -i mexicanBagels_audioFull.mp4 -acodec pcm_s16le mexicanBagels_s16le.wav
+
 The input transcript json must have the following [jsonschema](http://json-schema.org):
 
 ```json
